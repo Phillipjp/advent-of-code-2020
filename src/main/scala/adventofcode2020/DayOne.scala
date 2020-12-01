@@ -25,10 +25,10 @@ object DayOne {
     @tailrec
     def productOfNumbersThatAddTo2020(combinations: Seq[Seq[Int]]): Int = {
       val head = combinations.head
-      if(head.sum == 2020){
+      if (head.sum == 2020) {
         head.product
       }
-      else{
+      else {
         productOfNumbersThatAddTo2020(combinations.tail)
       }
     }
