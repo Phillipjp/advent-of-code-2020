@@ -43,9 +43,8 @@ object DayFive {
     seatIdentifiers.map(_.getSeatID)
       .sorted
       .sliding(3, 1)
-      .filter(tuple => tuple.head + 1 != tuple(1) && tuple.head + 2 != tuple.last)
-      .toList
-      .head
+      .find(tuple => tuple.head + 1 != tuple(1) && tuple.head + 2 != tuple.last)
+      .get
       .head + 1
   }
 
