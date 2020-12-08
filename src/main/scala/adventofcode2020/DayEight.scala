@@ -94,6 +94,7 @@ object DayEight {
 
   private [adventofcode2020] def getBrokenRoute(instructions: Seq[Instruction]): Seq[Int] = {
 
+    @tailrec
     def traverseInstructions(instructions: Seq[Instruction], route: Seq[Int]): Seq[Int] = {
       val index = route.last
       val instruction = instructions(index)
